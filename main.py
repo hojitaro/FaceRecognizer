@@ -68,8 +68,8 @@ class App(tkinter.Frame):
         self.file = self.files.pop()
         self.face = self.Face(self)
 
-        self.width = 500
-        self.height = 500
+        self.width = 800
+        self.height = 800
         self.master.geometry(f'{self.width}x{self.height}')
         self.master.resizable(False, False)
 
@@ -78,9 +78,6 @@ class App(tkinter.Frame):
 
         im_w = self.width if w > h else self.height * w / h
         im_h = self.height if h > w else self.width * h / w
-        #500 : h = x : w
-        #hx = 500w
-        #x = 500w/h
         print(im_w)
         print(im_h)
         img = img.resize((int(im_w), int(im_h)))
